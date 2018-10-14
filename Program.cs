@@ -81,10 +81,32 @@ namespace PrintPDF {
                 //return source;
             }
         }
+
+        private static void RotateAndSaveImage (System.Drawing.Bitmap input, int angle) {
+            //Open the source image and create the bitmap for the rotatated image
+            
+            using (Bitmap rotateImage = new Bitmap (input.Width, input.Height)) {
+                //Set the resolution for the rotation image
+                //rotateImage.SetResolution (input.HorizontalResolution, input.VerticalResolution);
+                //Create a graphics object
+                using (Graphics gdi = Graphics.FromImage (rotateImage)) {
+                    //Rotate the image
+                    gdi.TranslateTransform ((float) input.Width / 2, (float) input.Height / 2);
+                    gdi.RotateTransform (angle);
+                    gdi.TranslateTransform (-(float) input.Width / 2, -(float) input.Height / 2);
+                    gdi.DrawImage (input, new System.Drawing.Point (0, 0));
+                }
+
+                //Save to a file
+                rotateImage.Save ("temp1r.bmp");
+            }
+        }
+
         static void pd_PrintPage (object sender, PrintPageEventArgs e) {
             var info = new { Width = 100, Height = 50, Margin = 10, Format = ZXing.BarcodeFormat.CODE_128, Code = "12345EAN12345678", ShowCode = false };
             var bitmap = getBarCodeBitmap ();
-            AddDownString(bitmap);
+            AddDownString (bitmap);
+            RotateAndSaveImage(bitmap, 90);
             bitmap.Save ("temp1.bmp");
             e.Graphics.DrawImage (bitmap, 0, 0);
         }
