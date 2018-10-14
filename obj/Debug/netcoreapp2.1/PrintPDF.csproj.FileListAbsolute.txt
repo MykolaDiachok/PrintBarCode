@@ -1,0 +1,11 @@
+D:\Projects\PrintPDF\bin\Debug\netcoreapp2.1\PrintPDF.deps.json
+D:\Projects\PrintPDF\bin\Debug\netcoreapp2.1\PrintPDF.runtimeconfig.json
+D:\Projects\PrintPDF\bin\Debug\netcoreapp2.1\PrintPDF.runtimeconfig.dev.json
+D:\Projects\PrintPDF\bin\Debug\netcoreapp2.1\PrintPDF.dll
+D:\Projects\PrintPDF\bin\Debug\netcoreapp2.1\PrintPDF.pdb
+D:\Projects\PrintPDF\obj\Debug\netcoreapp2.1\PrintPDF.csprojAssemblyReference.cache
+D:\Projects\PrintPDF\obj\Debug\netcoreapp2.1\PrintPDF.csproj.CoreCompileInputs.cache
+D:\Projects\PrintPDF\obj\Debug\netcoreapp2.1\PrintPDF.AssemblyInfoInputs.cache
+D:\Projects\PrintPDF\obj\Debug\netcoreapp2.1\PrintPDF.AssemblyInfo.cs
+D:\Projects\PrintPDF\obj\Debug\netcoreapp2.1\PrintPDF.dll
+D:\Projects\PrintPDF\obj\Debug\netcoreapp2.1\PrintPDF.pdb
